@@ -1,0 +1,98 @@
+/* Importando la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Resets*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    /* Colores */
+    --color-caribean-current: #026c7c;
+    --color--midnight-green: #055864;
+    --color-myrtle-green: #297570;
+    --color-tyrian-purple: #6a0136;
+    --color-rusty-red: #dd2d4a;
+    --color-eggshell: #EAE6D3;
+
+    /* Tamaños*/
+    --nav-height:80px; /*defino una altura del header/nav */
+}
+
+.container{
+    max-width: 1320px; 
+    margin: 0 auto;
+}
+
+/* EL ESTILO DE LA PÁGINA ESTÁ CREADO POR DEFECTO PARA TAMAÑO DE ESCRITORIO Y SE HACE RESPONSIVA CON BREAKPOINTS*/
+/* ============================================================================================================ */
+
+/* Header */
+#header{
+    height: var(--nav-height);
+    background-color: var(--color-caribean-current);
+    /*color: var(--color-eggshell);*/
+    color: whitesmoke;
+    position: sticky; /* aunque haga scroll, siempre se ve y no sale del flujo del documento */
+    top: 0;
+    left: 0;
+    padding: 1rem 1.5rem;
+}
+
+.marca-logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.marca-logo span{
+    margin-right: 1rem;
+}
+
+/* Hero*/
+#hero{
+    width: 100%;
+    height: calc(100vh - var(--nav-height)); /*le resto la altura del nav*/
+    /*El gradiente se superpone a la imagen para apagar un poco el color*/
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 50%),
+    url("assets/img/front/hero-pexels-quang-nguyen-vinh-222549-14024791.jpg");
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.contenido-hero{
+    width:50%;
+    height: 75%;
+    padding: 1.5rem;    
+
+    /*debug*/
+    border: 1px solid fuchsia;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.contenido-hero h1{
+    color: var(--color-eggshell);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+
+    text-align: center;
+
+    /*text shadow? */
+}
+
+.contenido-hero p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    backdrop-filter: blur(2px);
+}
+
